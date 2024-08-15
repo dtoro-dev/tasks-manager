@@ -1,0 +1,42 @@
+<div class="min-h-screen p-4 flex flex-col gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div
+      class="bg-gray-800 p-4 rounded-lg shadow-lg text-white border-2 border-[#008cff] shadow-md shadow-gray-400"
+    >
+      <h3 class="text-xl font-semibold mb-2">Pendientes</h3>
+      <p class="text-3xl font-bold">
+        {{ this.taskCount?.pending || 0}}
+      </p>
+    </div>
+    <div
+      class="bg-gray-800 p-4 rounded-lg shadow-lg text-white border-2 border-[#f4b400] shadow-md shadow-gray-400"
+    >
+      <h3 class="text-xl font-semibold mb-2">En Proceso</h3>
+      <p class="text-3xl font-bold">
+        {{ this.taskCount?.inProgress || 0}}
+      </p>
+    </div>
+    <div
+      class="bg-gray-800 p-4 rounded-lg shadow-lg text-white border-2 border-[#00c853] shadow-md shadow-gray-400"
+    >
+      <h3 class="text-xl font-semibold mb-2">Finalizadas</h3>
+      <p class="text-3xl font-bold">
+        {{ this.taskCount?.completed || 0 }}
+      </p>
+    </div>
+    <div
+      class="bg-gray-800 p-4 rounded-lg shadow-lg text-white border-2 border-[#db4437] shadow-md shadow-gray-400"
+    >
+      <h3 class="text-xl font-semibold mb-2">Vencidas</h3>
+      <p class="text-3xl font-bold">
+        {{ this.taskCount?.overdue || 0 }}
+      </p>
+    </div>
+  </div>
+
+  <!-- Fila inferior con 2 cards grandes para gráficos -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <app-chart name="chart-annually" [chartOptions]="optionsChartAnnually"></app-chart>
+    <app-chart name="chart-annually" [chartOptions]="optionsChartHistory"></app-chart>
+  </div>
+</div>

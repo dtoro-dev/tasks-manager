@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "description": "Pendiente"
+  },
+  {
+    "id": 2,
+    "description": "En progreso"
+  },
+  {
+    "id": 3,
+    "description": "Finalizado"
+  }
+]

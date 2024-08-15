@@ -1,0 +1,104 @@
+<form
+  #taskForm="ngForm"
+  (ngSubmit)="onSubmit()"
+  [ngClass]="{'bg-gray-800': true, 'text-white': true, 'rounded-lg': true, 'px-4': true, 'scrollable-container': true}"
+>
+  <div class="space-y-2">
+    <input
+      type="text"
+      id="id"
+      name="id"
+      [(ngModel)]="task.id"
+      placeholder="ID de la tarea"
+      required
+      hidden
+    />
+    <div>
+      <label for="title" class="block text-sm font-medium">Título</label>
+      <input
+        autocomplete="off"
+        type="text"
+        id="title"
+        name="title"
+        [(ngModel)]="task.title"
+        placeholder="Título de la tarea"
+        required
+        class="px-4 py-1 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500"
+      />
+    </div>
+    <div>
+      <label for="description" class="block text-sm font-medium"
+        >Descripción</label
+      >
+      <textarea
+        id="description"
+        name="description"
+        rows="3"
+        [(ngModel)]="task.description"
+        placeholder="Descripción de la tarea"
+        required
+        class="px-4 py-1 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500"
+      ></textarea>
+    </div>
+    <div>
+      <label for="priority" class="block text-sm font-medium">Prioridad</label>
+      <select
+        id="priority"
+        name="priority"
+        required
+        class="px-4 py-1 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500"
+        [(ngModel)]="task.priorityId"
+      >
+        <option [value]="0">Seleccione una prioridad</option>
+        <ng-container *ngFor="let priority of PriorityService.getPriorities()">
+          <option [value]="priority.id">{{ priority.name }}</option>
+        </ng-container>
+      </select>
+    </div>
+    <div>
+      <label for="status" class="block text-sm font-medium">Estado</label>
+      <select
+        id="status"
+        name="status"
+        disabled
+        [(ngModel)]="task.stateId"
+        class="px-4 py-1 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500"
+      >
+        <ng-container *ngFor="let status of StateService.getStates()">
+          <option [value]="status.id">{{ status.name }}</option>
+        </ng-container>
+      </select>
+    </div>
+    <div>
+      <label for="dueDate" class="block text-sm font-medium"
+        >Fecha de Vencimiento</label
+      >
+      <input
+        type="date"
+        id="dueDate"
+        name="dueDate"
+        required
+        [(ngModel)]="task.dueDate"
+        class="px-4 py-1 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-blue-500 focus:ring-blue-500"
+      />
+    </div>
+  </div>
+  <div class="mt-4 flex gap-2">
+    <button
+      type="submit"
+      [disabled]="!taskForm.valid"
+      title="Crear tarea"
+      class="w-full bg-gray-600 hover:bg-gray-700 disabled:bg-gray-500 text-white font-semibold py-2 px-4 rounded-md"
+    >
+      {{ !task.id ? "Crear": "Actualizar" }}
+    </button>
+    <button
+      type="reset"
+      [disabled]="!taskForm.valid"
+      title="Limpiar formulario"
+      class="w-full bg-red-800 hover:bg-red-900 disabled:bg-gray-500 text-white font-semibold py-2 px-4 rounded-md"
+    >
+      Limpiar
+    </button>
+  </div>
+</form>

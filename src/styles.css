@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-attachment: fixed;
+  /* This line ensures the background stays fixed */
+  height: 100vh;
+  margin: 0;
+  /* Optional: Remove default margin if necessary */
+  overflow: hidden;
+}
+
+.scrollable-container {
+  max-height: 500px;
+  /* Set a fixed height */
+  overflow: overlay;
+  /* Enable vertical scrolling */
+  padding-right: 15px;
+  /* Adjust padding to avoid content overflow */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: rgb(255, 254, 243);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background: rgba(252, 249, 249, 0.2);
+}

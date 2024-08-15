@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Comprar comestibles",
+    "description": "Ir al supermercado y comprar alimentos para la semana.",
+    "priority": 3,
+    "priorityText": "Alta",
+    "dueDate": "2024-08-01",
+    "state": 1,
+    "stateText": "Pendiente"
+  },
+  {
+    "id": 2,
+    "title": "Reunión con el equipo",
+    "description": "Reunión semanal con el equipo de desarrollo para revisar el progreso del proyecto.",
+    "priority": 2,
+    "priorityText": "Media",
+    "dueDate": "2024-08-02",
+    "state": 1,
+    "stateText": "Pendiente"
+  },
+  {
+    "id": 3,
+    "title": "Llamada al cliente",
+    "description": "Llamar al cliente para discutir los requisitos del nuevo módulo.",
+    "priority": 3,
+    "priorityText": "Alta",
+    "dueDate": "2024-08-03",
+    "state": 2,
+    "stateText": "En progreso"
+  },
+  {
+    "id": 4,
+    "title": "Modificar documentación",
+    "description": "Actualizar la documentación del proyecto con las nuevas características.",
+    "priority": 1,
+    "priorityText": "Baja",
+    "dueDate": "2024-08-04",
+    "state": 3,
+    "stateText": "Finalizado"
+  },
+  {
+    "id": 5,
+    "title": "Enviar reporte",
+    "description": "Enviar el reporte mensual al gerente.",
+    "priority": 2,
+    "priorityText": "Media",
+    "dueDate": "2024-08-05",
+    "state": 1,
+    "stateText": "Pendiente"
+  },
+  {
+    "id": 6,
+    "title": "Revisar código",
+    "description": "Revisar el código del nuevo módulo para asegurar la calidad.",
+    "priority": 3,
+    "priorityText": "Alta",
+    "dueDate": "2024-08-06",
+    "state": 1,
+    "stateText": "Pendiente"
+  },
+  {
+    "id": 7,
+    "title": "Preparar presentación",
+    "description": "Preparar la presentación para la reunión con los inversores.",
+    "priority": 2,
+    "priorityText": "Media",
+    "dueDate": "2024-08-07",
+    "state": 2,
+    "stateText": "En progreso"
+  },
+  {
+    "id": 8,
+    "title": "Realizar pruebas",
+    "description": "Realizar pruebas de integración del nuevo sistema.",
+    "priority": 3,
+    "priorityText": "Alta",
+    "dueDate": "2024-08-08",
+    "state": 1,
+    "stateText": "Pendiente"
+  },
+  {
+    "id": 9,
+    "title": "Actualizar sitio web",
+    "description": "Actualizar el sitio web con la información más reciente.",
+    "priority": 1,
+    "priorityText": "Baja",
+    "dueDate": "2024-08-09",
+    "state": 3,
+    "stateText": "Finalizado"
+  },
+  {
+    "id": 10,
+    "title": "Planificar sprint",
+    "description": "Planificar el sprint para la próxima semana.",
+    "priority": 2,
+    "priorityText": "Media",
+    "dueDate": "2024-08-10",
+    "state": 1,
+    "stateText": "Pendiente"
+  }
+]
